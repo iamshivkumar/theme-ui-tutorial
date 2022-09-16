@@ -2,6 +2,8 @@ import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:theme_app/color_schemes.g.dart';
+import 'package:theme_app/ui/widgets/svg_icon.dart';
+import 'package:theme_app/utils/assets.dart';
 import 'package:theme_app/utils/labels.dart';
 
 import 'widgets/task_card.dart';
@@ -17,20 +19,26 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: scheme.surfaceVariant,
       bottomNavigationBar: BottomNavigationBar(
-        items: [
+        onTap: (v){},
+        items: const [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: "",
+            icon: Icon(Icons.home_rounded),
+            label: "Home",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.assistant_navigation),
-            label: "",
+            icon: SvgIcon(
+              Assets.oneFourth,
+              size: 40,
+            ),
+            label: "Home",
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.settings_outlined),
-            label: "",
+            label: "Home",
           ),
         ],
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
       ),
       body: SafeArea(
         child: Column(
@@ -58,8 +66,9 @@ class HomePage extends StatelessWidget {
                   Stack(
                     alignment: Alignment.center,
                     children: [
-                      CircleAvatar(
+                      const CircleAvatar(
                         radius: 28,
+                        backgroundImage: AssetImage(Assets.photo),
                       ),
                       Transform.translate(
                         offset: Offset(-20, 20),

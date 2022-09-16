@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:theme_app/ui/home_page.dart';
+import 'package:theme_app/ui/widgets/svg_icon.dart';
+import 'package:theme_app/utils/assets.dart';
 import 'package:theme_app/utils/labels.dart';
 
 class OnboardingPage extends StatelessWidget {
@@ -18,12 +20,17 @@ class OnboardingPage extends StatelessWidget {
           padding: const EdgeInsets.only(left: 16),
           child: CircleAvatar(
             backgroundColor: scheme.surface,
+            child: ImageIcon(
+              const AssetImage(Assets.dashboard),
+              size: 16,
+              color: scheme.onSurface,
+            ),
           ),
         ),
         actions: [
           IconButton(
             onPressed: () {},
-            icon: Icon(Icons.menu),
+            icon: const SvgIcon(Assets.menuIcon),
           ),
         ],
       ),

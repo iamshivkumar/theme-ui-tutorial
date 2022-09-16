@@ -17,40 +17,40 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-          shadowColor: lightColorScheme.outline.withOpacity(0.1),
-          scaffoldBackgroundColor: lightColorScheme.surface,
-          appBarTheme: AppBarTheme(
-            backgroundColor: Colors.transparent,
-            systemOverlayStyle: SystemUiOverlayStyle.dark,
-          ),
-          textTheme: base
-              .copyWith(
+        shadowColor: lightColorScheme.outline.withOpacity(0.1),
+        scaffoldBackgroundColor: lightColorScheme.surface,
+        appBarTheme: AppBarTheme(
+          backgroundColor: Colors.transparent,
+          systemOverlayStyle: SystemUiOverlayStyle.dark,
+        ),
+        textTheme: base
+            .copyWith(
                 displayMedium: TextStyle(
                   fontWeight: FontWeight.bold,
                 ),
                 titleLarge: TextStyle(fontWeight: FontWeight.bold),
                 headlineSmall: TextStyle(fontWeight: FontWeight.w800),
-                titleMedium: TextStyle(fontWeight: FontWeight.bold)
-              )
-              .apply(
-                  bodyColor: lightColorScheme.onSurface,
-                  displayColor: lightColorScheme.outline),
-          textButtonTheme: TextButtonThemeData(
-            style: TextButton.styleFrom(
-              foregroundColor: lightColorScheme.outline,
-            ),
+                titleMedium: TextStyle(fontWeight: FontWeight.bold))
+            .apply(
+                bodyColor: lightColorScheme.onSurface,
+                displayColor: lightColorScheme.outline),
+        textButtonTheme: TextButtonThemeData(
+          style: TextButton.styleFrom(
+            foregroundColor: lightColorScheme.outline,
           ),
-          colorScheme: lightColorScheme,
-          useMaterial3: true,
-          primarySwatch: Colors.lightGreen,
-          elevatedButtonTheme: ElevatedButtonThemeData(
-            style: ElevatedButton.styleFrom(
-              backgroundColor: lightColorScheme.secondary,
-              foregroundColor: lightColorScheme.onSecondary,
-              padding: EdgeInsets.symmetric(horizontal: 20),
-              textStyle: TextStyle(fontWeight: FontWeight.bold),
-            ),
-          )),
+        ),
+        colorScheme: lightColorScheme,
+        useMaterial3: true,
+        primarySwatch: Colors.lightGreen,
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: lightColorScheme.secondary,
+            foregroundColor: lightColorScheme.onSecondary,
+            padding: EdgeInsets.symmetric(horizontal: 20),
+            textStyle: TextStyle(fontWeight: FontWeight.bold),
+          ),
+        ),
+      ),
       home: OnboardingPage(),
     );
   }
