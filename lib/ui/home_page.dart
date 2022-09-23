@@ -19,16 +19,16 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: scheme.surfaceVariant,
       bottomNavigationBar: BottomNavigationBar(
-        onTap: (v){},
+        currentIndex: 0,
+        onTap: (v) {},
         items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.home_rounded),
             label: "Home",
           ),
           BottomNavigationBarItem(
-            icon: SvgIcon(
-              Assets.oneFourth,
-              size: 40,
+            icon: ImageIcon(
+              AssetImage(Assets.oneFourth),
             ),
             label: "Home",
           ),

@@ -6,15 +6,18 @@ class SvgIcon extends StatelessWidget {
     this.value, {
     super.key,
     this.size,
+    this.color
   });
   final double? size;
   final String value;
+  final Color? color;
   @override
   Widget build(BuildContext context) {
     return SvgPicture.asset(
       value,
       height: size ?? 24,
       width: size ?? 24,
+      color: color,
     );
   }
 }

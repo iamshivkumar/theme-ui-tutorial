@@ -30,7 +30,11 @@ class OnboardingPage extends StatelessWidget {
         actions: [
           IconButton(
             onPressed: () {},
-            icon: const SvgIcon(Assets.menuIcon),
+            icon: ImageIcon(
+              const AssetImage(Assets.menuIcon),
+              color: scheme.onSurface,
+            ),
+            color: scheme.onPrimaryContainer,
           ),
         ],
       ),
