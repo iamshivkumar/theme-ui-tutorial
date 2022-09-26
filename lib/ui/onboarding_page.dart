@@ -20,10 +20,9 @@ class OnboardingPage extends StatelessWidget {
           padding: const EdgeInsets.only(left: 16),
           child: CircleAvatar(
             backgroundColor: scheme.surface,
-            child: ImageIcon(
-              const AssetImage(Assets.dashboard),
+            child: const ImageIcon(
+              AssetImage(Assets.dashboard),
               size: 16,
-              color: scheme.onSurface,
             ),
           ),
         ),

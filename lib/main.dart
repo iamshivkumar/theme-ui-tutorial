@@ -17,6 +17,7 @@ class MyApp extends StatelessWidget {
     final baseDark = ThemeData.dark().textTheme;
     return MaterialApp(
       title: 'Theme UI',
+      debugShowCheckedModeBanner: false,
       themeMode: ThemeMode.dark,
       darkTheme: ThemeData.dark().copyWith(
         shadowColor: darkColorScheme.outline.withOpacity(0.1),
